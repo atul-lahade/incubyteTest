@@ -45,6 +45,21 @@ public class StringCalculatorTest {
     public final void whenOneOrMoreNumbersAreMoreThan1000() {
         Assert.assertEquals(2+1000+6+9, StringCalculator.add("2,1000,1001,6,1234,9"));
     }
+	
+	@Test
+    public final void whenDelimiterofAnyLength() {
+        Assert.assertEquals(6, StringCalculator.add("//[***]\n1***2***3"));
+    }
+	
+	@Test
+    public final void whenMultipleDelimiterLobgerThanOneChar() {
+        Assert.assertEquals(6, StringCalculator.add("“//[**][%%]\n1**2%%3"));
+    }
+	
+	@Test
+    public final void whenMultipleDelimiter() {
+        Assert.assertEquals(6, StringCalculator.add("//[*][%]\n1*2%3” "));
+    }
 }
 
 
