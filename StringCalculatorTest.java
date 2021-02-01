@@ -4,10 +4,10 @@ import junit.framework.Assert;
 
 public class StringCalculatorTest {
 
-	/*@Test(expected = RuntimeException.class)
+/*	@Test(expected = RuntimeException.class)
 	public final void whenMoreThanTwoNumberUsed(){
 		StringCalculator.add("1,4,6,7");
-	}
+	}*/
 	
 	@Test
 	public final void whenStringIsEmpty(){
@@ -17,16 +17,16 @@ public class StringCalculatorTest {
 	@Test
     public final void whenAnyNumberOfNumbersUsed() {
         Assert.assertEquals(3+6+15+18+46+33, StringCalculator.add("3,6,15,18,46,33"));
-    }*/
+    }
 	
-	/*@Test
-	public final void whenNewLineIsUsedBetweenNumbersThenReturnValuesAreTheirSums() {
+	@Test
+	public final void whenNewLineIsUsed() {
 	    Assert.assertEquals(9+2+5, StringCalculator.add("9,2n5"));
-	}*/
+	}
 	
 	@Test
 	public final void whenDelimiterIsSpecified() {
-	    Assert.assertEquals(1+2+5, StringCalculator.add("//;n1;2;5"));
+	    Assert.assertEquals(1+2, StringCalculator.add("//;\n1;2"));
 	}
 }
 
