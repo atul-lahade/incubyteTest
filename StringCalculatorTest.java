@@ -19,9 +19,14 @@ public class StringCalculatorTest {
         Assert.assertEquals(3+6+15+18+46+33, StringCalculator.add("3,6,15,18,46,33"));
     }*/
 	
-	@Test
+	/*@Test
 	public final void whenNewLineIsUsedBetweenNumbersThenReturnValuesAreTheirSums() {
 	    Assert.assertEquals(9+2+5, StringCalculator.add("9,2n5"));
+	}*/
+	
+	@Test
+	public final void whenDelimiterIsSpecified() {
+	    Assert.assertEquals(1+2+5, StringCalculator.add("//;n1;2;5"));
 	}
 }
 
