@@ -6,4 +6,9 @@ public class StringCalculatorTest {
 	public final void whenMoreThanTwoNumberUsed(){
 		StringCalculator.add("1,4,6,7");
 	}
+	
+	@Test
+	public final void whenStringIsEmpty(){
+		Assert.assertEquals(0, StringCalculator.add(""));
+	}
 }
